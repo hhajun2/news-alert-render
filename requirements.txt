@@ -1,4 +1,3 @@
-flask
-feedparser
 requests
-konlpy
+feedparser
+flask
