@@ -3,12 +3,10 @@ from news_alert import run_news_once
 
 app = Flask(__name__)
 
-# 기본 페이지 라우팅
 @app.route("/")
 def index():
     return "✅ 뉴스 알림 시스템이 정상 작동 중입니다."
 
-# 수동 실행을 위한 라우팅
 @app.route("/run")
 def run_news():
     try:
