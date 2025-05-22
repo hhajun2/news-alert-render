@@ -10,9 +10,10 @@ def index():
 @app.route("/run")
 def run_news():
     try:
-        counter = 1  # 임시 카운터
+        counter = 1
         run_news_once(counter)
         return "📢 뉴스 전송 완료!"
     except Exception as e:
-        return f"❌ 오류 발생: {e}", 500
+        return f"❌ 오류 발생: {str(e)}", 500
 
+# gunicorn용 app 객체는 여기서 인식됨
